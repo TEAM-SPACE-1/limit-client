@@ -15,7 +15,6 @@ const SideFilter = ({ selectedCategory, categories = [], allCategories = [], set
         onGenderChange(gender, e.target.checked);
     };
     
-    // 필터 상태 정의
     const [filters, setFilters] = useState({
         delivery: false,
         directTrade: false,
@@ -25,7 +24,6 @@ const SideFilter = ({ selectedCategory, categories = [], allCategories = [], set
         isGenderOpen: true,
     });
 
-    // 카테고리 및 리셋 관련 상태
     const [openCategories, setOpenCategories] = useState({});
     const [showResetButton, setShowResetButton] = useState(false);
     const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
@@ -37,12 +35,10 @@ const SideFilter = ({ selectedCategory, categories = [], allCategories = [], set
     const toggleMajor = (majorId) => {
         setOpenMajors((prev) => ({
             ...prev,
-            [majorId]: !prev[majorId], // MAJOR 카테고리 토글 (열림/닫힘)
+            [majorId]: !prev[majorId], 
         }));
     };
     
-
-    // 상품 데이터를 필터링하여 가져오는 함수
     const fetchProductData = async (categoryFilter = [], genderFilter = []) => {
         const categoryParam = categoryFilter.map(cat => `categoryId=${cat}`).join('&');
         const genderParam = genderFilter.map(gender => `gender=${gender}`).join('&');
@@ -222,7 +218,6 @@ const SideFilter = ({ selectedCategory, categories = [], allCategories = [], set
         return null;
     };
 
-    // 선택된 카테고리 가져오기
     const getSelectedCategories = () => {
         let selected = [];
         if (categories) {

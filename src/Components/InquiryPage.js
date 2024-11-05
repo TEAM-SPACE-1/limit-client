@@ -8,7 +8,7 @@ export default function InquiryPage() {
 
     const [expanded, setExpanded] = useState(false); // 답변 보기&닫기 버튼의 현재 상태
 
-    const toggleExpanded = () => { // 답변 보기&닫기 버튼 상태 반전 메서드
+    const toggleExpanded = () => { 
         setExpanded(!expanded); 
     };
 

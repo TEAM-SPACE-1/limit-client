@@ -9,7 +9,7 @@ const fetchProductData = async (brandId, category = [], gender = '', page = 0, s
     let categoryParam = '';
     if (category.length > 0) {
         categoryParam = category.map(cat => `category=${cat}`).join('&');
-    }
+    }    
 
     const url = `https://api.lim-it.one/api/v1/products?brandId=${brandId}&${categoryParam}&gender=${gender}&page=${page}&size=${size}&sort=${sort}`;
 

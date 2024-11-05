@@ -131,11 +131,7 @@ const TotalCate = () => {
                         category={selectedCategories.length > 0 ? selectedCategories : totalCategories} 
                         products={products} 
                     />  
-                    {hasMore && !isLoading && (
-                        <LoadMoreButton onClick={loadMoreProducts}>
-                            더 보기
-                        </LoadMoreButton>
-                    )}
+                    
                     {isLoading && <LoadingMessage>상품을 불러오는 중...</LoadingMessage>}
                 </ProductWrapper>
             </ProductContainer>

@@ -6,13 +6,13 @@ export default function SignUp() {
         <Container>
             <Title>회원가입이 완료되었습니다.</Title>
             <LoginPageLink to = "/login">로그인페이지로 이동</LoginPageLink>
-        </Container>
+        </Container>      
     );
-}
+}          
 
-const Container = styled.div` // 최상위 컨테이너
+const Container = styled.div` // 최상위 컨테이너   
     display: flex;
-    flex-direction: column;
+    flex-direction: column;     
     width: 450px;
     margin: 100px auto;
 
