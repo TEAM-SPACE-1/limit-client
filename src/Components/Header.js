@@ -5,7 +5,7 @@ import Logo from '../Images/limit-logo.svg';
 import ChattingIcon from '../Images/chatting-icon.svg';
 import SearchIcon from '../Images/search-icon.svg'
 
-const Header = () => {
+const Header = () => {  
 
     const [userLogin, setUserLogin] = useState(false); // 사용자 로그인 상태
 
